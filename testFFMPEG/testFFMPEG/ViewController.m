@@ -22,7 +22,10 @@
     [super viewDidLoad];
     
     NSString *fromFile = [[NSBundle mainBundle]pathForResource:@"test.mp4" ofType:nil];
-    NSString *toFile = @"/Users/mac/Desktop/video.gif";
+    //Document目录
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *path = [paths objectAtIndex:0];
+    NSString *toFile = [path stringByAppendingString:@"/FFMEPG.mov"];
     
     int argc = 4;
     char **arguments = calloc(argc, sizeof(char*));

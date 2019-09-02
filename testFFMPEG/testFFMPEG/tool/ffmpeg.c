@@ -308,6 +308,7 @@ static void term_exit_sigsafe(void)
 #endif
 }
 
+
 void term_exit(void)
 {
     av_log(NULL, AV_LOG_QUIET, "%s", "");
